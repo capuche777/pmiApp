@@ -9,11 +9,11 @@ const getAPIToken = () => {
         }
     })
     .then(res => {
-        if ( res['statusText'] == 'OK' ) {
+        if ( res['status'] == 200 ) {
             const token = res['data']['key']
             sessionStorage.setItem('token', token)
 
-            location.href = '/questionary.html'
+            location.href = 'questionary.html'
         }
     })
     .catch(e => {
