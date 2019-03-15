@@ -1,7 +1,8 @@
 const getAPIToken = () => {
     axios({
         method: 'POST',
-        url: 'rest-auth/login/',
+        url: `${baseURL}rest-auth/login/`,
+        contentType: 'application/json',
         data: {
             username: document.getElementById('username').value,
             password: document.getElementById('password').value
