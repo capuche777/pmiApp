@@ -1,0 +1,21 @@
+<?xml version='1.5' encoding='utf-8'?>
+<widget id="app.survey.phillips" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Demo App</name>
+    <description>
+        This app has been developed for Phillips Morris International.
+    </description>
+    <author email="info@d2clic.net" href="http://d2clic.com">
+        Jeremias Enriquez
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.1.0" />
+    <platform name="android">
+	<icon qualifier="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
+	<icon qualifier="mdpi" src="res/icons/android/drawable-mdpi-icon.png" />
+	<icon qualifier="hdpi" src="res/icons/android/drawable-hdpi-icon.png" />
+	<icon qualifier="xhdpi" src="res/icons/android/drawable-xhdpi-icon.png" />
+	<icon qualifier="xxhdpi" src="res/icons/android/drawable-xxhdpi-icon.png" />
+	<icon qualifier="xxxhdpi" src="res/icons/android/drawable-xxxhdpi-icon.png" />
+</platform>
+</widget>
