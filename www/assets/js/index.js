@@ -1,9 +1,25 @@
-/* 
+const getAPIToken = () => {
+    axios({
+        method: 'POST',
+        url: 'rest-auth/login/',
+        data: {
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value
+        }
+    })
+    .then(res => {
+        if ( res['statusText'] == 'OK' ) {
+            const token = res['data']['key']
+            sessionStorage.setItem('token', token)
 
-I built this login form to block the front end of most of my freelance wordpress projects during the development stage. 
+            location.href = '/questionary.html'
+        }
+    })
+    .catch(e => {
+        console.log(e)
+    })
+}
 
-This is just the HTML / CSS of it but it uses wordpress's login system. 
-
-Nice and Simple
-
-*/
+document.getElementById('btn_login').addEventListener('click', () => {
+    getAPIToken()
+})
