@@ -13,7 +13,7 @@ const getAPIToken = () => {
             const token = res['data']['key']
             sessionStorage.setItem('token', token)
 
-            location.href = 'questionary.html'
+            window.location = '/questionary.html'
         }
     })
     .catch(e => {
